@@ -1,2 +1,2 @@
 # cyrptography-ciphers
-Implementation of most common such as (Caeser cipher - Vigenère - Playfair - Classic DES ) using TKinter GUI
+Implementation of most common ciphers such as (Caeser- Vigenère - Playfair - Classic DES ) using TKinter GUI

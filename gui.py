@@ -18,7 +18,7 @@ page4.grid(row=0 , column=0, sticky="nsew")
 page5.grid(row=0 , column=0, sticky="nsew")
 
 # For changing the icon of the title bar
-pic = PhotoImage(file = r'./C:\Users\compumarts\Desktop\guii\padlock.png')
+pic = PhotoImage(file = r'./\padlock.png')
 root.iconphoto(False,pic)
 # For changing the title of the title bar 
 root.title("Text Encryptor-Decryptor")
@@ -380,6 +380,7 @@ def decrypt():  #decryption
         else:
             plain_text+=(my_matrix[loc[0]][loc1[1]]+my_matrix[loc1[0]][loc[1]])   
         i=i+2  
+    plain_text = plain_text.replace("X","")
     print(plain_text)
     label46 =tk.Label(page4,text=plain_text,width=20,bg="light yellow")
     label46.config(font=bold_font)
@@ -446,6 +447,8 @@ def encryption5():
             'F': "1111"}
         bin = ""
         for i in range(len(s)):
+            if(s[i]=='\n'):
+                continue
             bin = bin + mp[s[i]]
         return bin
 
